@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>align-items</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width:75%;
+      height: 500px;
+      border: 1px solid salmon;
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-around;
+      /*align-items:设置子元素在测周方向上的对齐方式
+      center：设置在侧轴方向上剧中对齐
+      flex-start：顶对齐
+      flex-end:底对齐
+      stretch:拉伸 让子元素在侧轴方向上进行拉伸会填满整个侧轴方向
+      baseline：文本基线*/
+      align-items: center;
+    }
+    .first,.second,.third {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      /*设置单个元素在侧轴方向上的对齐方式*/
+      align-self:flex-start;
+    }
+    .second {
+      background-color: cyan;
+      align-self: center;
+    }
+    .third {
+      background-color: magenta;
+      align-self:flex-end;
+    }
+  </style>
+</head>
+<body>
+    <div class="box">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+    </div>  
+</body>
+</html>
